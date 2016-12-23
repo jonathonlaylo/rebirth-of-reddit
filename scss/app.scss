@@ -5,25 +5,20 @@ header{
   width: 100%;
   height: 60px;
   display: flex;
-  // flex-flow: row wrap;
   justify-content: center;
   background-color: white !important;
 
   @media screen and (min-width: 600px){
-    // background-color: yellow;
     background:url('./../assets/header_bg.svg')no-repeat center;
   }
 
   @media screen and (min-width: 900px){
-    // background-color: green;
     background:url('./../assets/header_bg.svg')no-repeat center;
   }
 }
 
 #logo{
   width: 100%;
-  // display: flex;
-  // justify-content: center;
   background-image: url('./../assets/logo.svg');
   background-repeat: no-repeat;
   background-position: left;
@@ -57,8 +52,6 @@ header{
 #random{
   color: #7B7C7E;
   display: inline-block;
-  // width: 30%;
-  // justify-content: right;
   @media screen and (min-width: 600px){
     // justify-content: center;
     // width: 20%;
@@ -67,15 +60,14 @@ header{
     // justify-content: center;
     // width: 20%;
   }
+}
+#random:hover{
+  color: orange;
 }
 
 #boards{
   color: #7B7C7E;
   display: inline-block;
-  // justify-content: center;
-  // align-items: center;
-  // width: 30%;
-  // justify-content: right;
   @media screen and (min-width: 600px){
     // justify-content: center;
     // width: 20%;
@@ -85,14 +77,13 @@ header{
     // width: 20%;
   }
 }
+#boards:hover{
+  color: orange;
+}
 
 #app{
   color: #7B7C7E;
   display: inline-block;
-  // justify-content: left;
-  // align-items: center;
-  // width: 30%;
-  // justify-content: right;
   @media screen and (min-width: 600px){
     // justify-content: center;
     // width: 20%;
@@ -101,15 +92,22 @@ header{
     // justify-content: center;
     // width: 20%;
   }
+}
+#app:hover{
+  color: orange;
 }
 
 .DOT{
   color: #3a3a3c;
   @media screen and (min-width: 600px){
   color: #7B7C7E;
+  margin-left: 10px;
+  margin-right: 10px;
   }
   @media screen and (min-width: 900px){
   color: #7B7C7E;
+  margin-left: 10px;
+  margin-right: 10px;
   }
 }
 
@@ -132,8 +130,6 @@ body{
   height: 500px;
   padding-top: 20px;
   margin-left: 25px;
-  // justify-content: center;
-  // margin-bottom: 9px;
 }
 
 .outerContainer{
@@ -146,22 +142,22 @@ body{
   margin-top: 20px;
   margin-bottom: 20px;
   margin-left: 20px;
-  // padding-left: 10px;
-  // margin-bottom: 9px;
   box-sizing: border-box;
   justify-content: center;
-
+}
+.outerContainer:hover{
+  outline: orange solid 4px;
 }
 
 .image{
   width: 400px;
   height: 305px;
+  background-size: cover;
   background-position: center;
 }
 
 .title{
   width: 400px;
-  // justify-content: center;
   font-size: 30px;
 }
 
@@ -172,7 +168,6 @@ body{
 
 .date{
   width: 400px;
-  padding-bottom: 20px;
   font-size: 15px;
 }
 
@@ -181,4 +176,8 @@ footer{
   display: flex;
   justify-content: center;
   background-color: black;
+}
+
+.instagram:hover{
+    background:url('./../assets/instagram_orange.svg')no-repeat center;
 }

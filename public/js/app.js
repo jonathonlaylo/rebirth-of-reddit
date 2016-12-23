@@ -1,17 +1,13 @@
 /*jshint esversion: 6 */
 (function(window){
-// console.log('DADAADSALDASDMAKLDNKLANDKL');
 
 let myData;
 
 function reqListener() {
   reddit = document.getElementById('reddit');
-  // container = document.getElementById('container');
 
   var myData = JSON.parse(this.responseText);
-  // console.log(myData);
   myData = myData.data.children;
-  // console.log('the children', myData);
 
   for (var i = 0; i < myData.length; i++) {
     var container = document.createElement('div');
@@ -23,30 +19,31 @@ function reqListener() {
     container.className = 'container';
     outerContainer.className = 'outerContainer';
 
-    var image = document.createElement('img');
+    var image = document.createElement('div');
     image.className = 'image';
-    image.src = myData[i].data.preview.images[0].source.url;
+    if (myData[i].data.preview.images[0].variants.gif) {
+      image.style =`background-image: url('${myData[i].data.preview.images[0].variants.gif.source.url};')`;
+    } else {
+      image.style = `background-image: url('${myData[i].data.preview.images[0].source.url};')`;
+    }
     console.log(image);
     container.appendChild(image);
 
     var title = document.createElement('div');
     title.className = 'title';
     title.innerHTML = myData[i].data.title;
-    console.log(title);
     container.appendChild(title);
-
-    var author = document.createElement('div');
-    author.className = 'author';
-    author.innerHTML = ' by ' + myData[i].data.author;
-    console.log(author);
-    container.appendChild(author);
 
     var date = document.createElement('div');
     date.className = 'date';
     var postedDate = (new Date(myData[i].data.created)).toString();
-    console.log(postedDate);
-    date.innerHTML = 'Created Date: ' + postedDate;
+    date.innerHTML = postedDate;
     container.appendChild(date);
+
+    var author = document.createElement('div');
+    author.className = 'author';
+    author.innerHTML = 'by ' + myData[i].data.author;
+    container.appendChild(author);
   }
 }
 let oReq = new XMLHttpRequest();

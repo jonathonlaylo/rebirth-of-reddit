@@ -105,22 +105,35 @@ header {
   color: #7B7C7E;
   display: inline-block; }
 
+#random:hover {
+  color: orange; }
+
 #boards {
   color: #7B7C7E;
   display: inline-block; }
+
+#boards:hover {
+  color: orange; }
 
 #app {
   color: #7B7C7E;
   display: inline-block; }
 
+#app:hover {
+  color: orange; }
+
 .DOT {
   color: #3a3a3c; }
   @media screen and (min-width: 600px) {
     .DOT {
-      color: #7B7C7E; } }
+      color: #7B7C7E;
+      margin-left: 10px;
+      margin-right: 10px; } }
   @media screen and (min-width: 900px) {
     .DOT {
-      color: #7B7C7E; } }
+      color: #7B7C7E;
+      margin-left: 10px;
+      margin-right: 10px; } }
 
 body {
   display: flex;
@@ -147,9 +160,13 @@ body {
   box-sizing: border-box;
   justify-content: center; }
 
+.outerContainer:hover {
+  outline: orange solid 4px; }
+
 .image {
   width: 400px;
   height: 305px;
+  background-size: cover;
   background-position: center; }
 
 .title {
@@ -162,7 +179,6 @@ body {
 
 .date {
   width: 400px;
-  padding-bottom: 20px;
   font-size: 15px; }
 
 footer {
@@ -170,3 +186,6 @@ footer {
   display: flex;
   justify-content: center;
   background-color: black; }
+
+.instagram:hover {
+  background: url("./../assets/instagram_orange.svg") no-repeat center; }
