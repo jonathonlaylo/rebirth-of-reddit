@@ -26,7 +26,7 @@ function reqListener() {
     } else {
       image.style = `background-image: url('${myData[i].data.preview.images[0].source.url};')`;
     }
-    console.log(image);
+    // console.log(image);
     container.appendChild(image);
 
     var title = document.createElement('div');
@@ -50,5 +50,17 @@ let oReq = new XMLHttpRequest();
 oReq.addEventListener('load', reqListener);
 oReq.open('GET', 'https://www.reddit.com/r/aww/.json');
 oReq.send();
+
+document.getElementById('random').addEventListener('click', ()=>{
+  console.log('im working');
+});
+
+document.getElementById('boards').addEventListener('click', ()=>{
+  console.log('im also working');
+});
+
+document.getElementById('app').addEventListener('click', ()=>{
+  console.log('am i working?');
+});
 
 }(window));
