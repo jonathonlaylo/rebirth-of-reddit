@@ -53,14 +53,23 @@ oReq.send();
 
 document.getElementById('random').addEventListener('click', ()=>{
   console.log('im working');
+
 });
 
 document.getElementById('boards').addEventListener('click', ()=>{
-  console.log('im also working');
+  console.log('its working');
+  let oReqBoards = new XMLHttpRequest();
+  oReqBoards.addEventListener('load', reqListener);
+  oReqBoards.open('GET', 'https://www.reddit.com/r/funny/.json');
+  oReqBoards.send();
 });
 
 document.getElementById('app').addEventListener('click', ()=>{
   console.log('am i working?');
+  let oReqApp = new XMLHttpRequest();
+  oReqApp.addEventListener('load', reqListener);
+  oReqApp.open('GET', 'https://www.reddit.com/r/sports/.json');
+  oReqApp.send();
 });
 
 }(window));

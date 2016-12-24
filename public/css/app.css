@@ -80,14 +80,32 @@ header {
   background-position: left; }
   @media screen and (min-width: 600px) {
     #logo {
+      margin-left: 40px;
       background-image: url("./../assets/logo.svg");
       background-repeat: no-repeat;
       background-position: center; } }
   @media screen and (min-width: 900px) {
     #logo {
+      margin-left: 40px;
       background-image: url("./../assets/logo.svg");
       background-repeat: no-repeat;
       background-position: center; } }
+
+#plus-box {
+  color: red;
+  height: 30px;
+  width: 30px;
+  border: 1px orange solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 13px;
+  margin-right: 10px; }
+
+#plus-box:hover {
+  background-color: orange;
+  color: white;
+  border: 2px orangel solid; }
 
 #menu {
   height: 50px;
@@ -139,7 +157,7 @@ body {
   display: flex;
   flex-flow: column wrap;
   background-image: url("https://raw.githubusercontent.com/devleague/rebirth-of-reddit/master/assets/bg.jpg");
-  font-family: helvetica; }
+  font-family: 'Oswald', sans-serif; }
 
 .container {
   width: 450px;
